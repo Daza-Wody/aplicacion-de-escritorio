@@ -1,4 +1,4 @@
-# 🔬 Sistema de Análisis de Bichos
+# 🔬 Sistema de Análisis
 
 Aplicación de escritorio desarrollada en Python para el registro de pacientes y detección automática de bichos mediante una red neuronal entrenada (YOLOv11). Genera un reporte en PDF con los resultados del análisis.
 

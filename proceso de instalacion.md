@@ -1,8 +1,6 @@
-# Proceso de Instalación — Sistema de Análisis de Bichos
+# Proceso de Instalación — Sistema de Análisis de bichos
 
 Este documento explica cómo instalar y ejecutar la aplicación en una computadora nueva, tanto en modo desarrollo como generando el ejecutable portable.
-
-> Nota: este proyecto es parte de una tesis académica. El término "bichos" se usa de forma genérica para proteger el objeto de estudio.
 
 ---
 
@@ -20,7 +18,7 @@ Este documento explica cómo instalar y ejecutar la aplicación en una computado
 ## 2. Descargar el proyecto
 
 Abre una terminal (PowerShell o CMD) y ejecuta:
-
+Recuerda que al ejecutar esto tienes que crear una carpeta bacilos y dirigirte a ella C://Documents/Bacilos/
 ```bash
 git clone https://github.com/Daza-Wody/aplicacion-de-escritorio.git
 ```
@@ -44,7 +42,7 @@ Durante la instalación en Windows, marca la opción **"Add Python to PATH"**.
 ## 4. Instalar dependencias
 
 Dentro de la carpeta del proyecto ejecuta:
-
+Recuerda que al ejecutar esto tienes que estar en la ruta de tu archivo donde clonaste. C://Documents/Bacilos/
 ```bash
 pip install -r requirements.txt
 ```
@@ -59,7 +57,7 @@ Esto instala todas las librerías necesarias:
 ---
 
 ## 5. Ejecutar la aplicación
-
+Recuerda que al ejecutar esto tienes que estar en la ruta de tu archivo donde clonaste. C://Documents/Bacilos/
 ```bash
 python main.py
 ```
