@@ -24,12 +24,22 @@ class RegistroPacienteView(ctk.CTkFrame):
         if max_len and len(event.widget.get()) >= max_len:
             return "break"
 
-    # bueno, esto es para que solo deje escribir letras
-    def _solo_letras(self, event):
+    # bueno, esto es para que solo deje escribir letras y limite la longitud
+    def _solo_letras(self, event, max_len=None):
         if event.keysym in ("BackSpace", "Delete", "Left", "Right",
                             "Home", "End", "Tab", "Return", "space"):
             return
         if event.char and not event.char.isalpha() and event.char != " ":
+            return "break"
+        if max_len and len(event.widget.get()) >= max_len:
+            return "break"
+
+    # bueno, esto limita la longitud de un campo sin importar qué caracteres se escriban
+    def _limitar_longitud(self, event, max_len):
+        if event.keysym in ("BackSpace", "Delete", "Left", "Right",
+                            "Home", "End", "Tab", "Return"):
+            return
+        if max_len and len(event.widget.get()) >= max_len:
             return "break"
 
     # bueno, esto pone las rayitas en la fecha automáticamente
@@ -94,8 +104,8 @@ class RegistroPacienteView(ctk.CTkFrame):
             ("Fecha de nacimiento", "fecha_nacimiento", 2, 1, None),
             ("Edad", "edad", 2, 2, None),
             ("Celular (opcional)", "celular", 3, 1, lambda e: self._solo_numeros(e, 9)),
-            ("Médico solicitante", "medico_solicitante", 4, 0, self._solo_letras),
-            ("N° de muestra", "numero_muestra", 4, 1, None),
+            ("Médico solicitante", "medico_solicitante", 4, 0, lambda e: self._solo_letras(e, max_len=50)),
+            ("N° de muestra", "numero_muestra", 4, 1, lambda e: self._solo_numeros(e, max_len=3)),
             ("Fecha del análisis", "fecha_analisis", 4, 2, None),
         ]
 
@@ -203,6 +213,7 @@ class RegistroPacienteView(ctk.CTkFrame):
             font=ctk.CTkFont(size=12),
         )
         self.entry_domicilio.pack(fill="x")
+        self.entry_domicilio.bind("<Key>", lambda e: self._limitar_longitud(e, max_len=100))
 
         # bueno, que las columnas se ajusten
         for i in range(3):

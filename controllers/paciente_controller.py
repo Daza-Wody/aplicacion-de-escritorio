@@ -42,11 +42,24 @@ def registrar_paciente(nombre, apellido_paterno, apellido_materno, dni,
     if not domicilio:
         return False, "El domicilio es obligatorio."
 
+    if len(domicilio) > 100:
+        return False, "El domicilio no puede tener más de 100 caracteres."
+
     if not medico_solicitante:
         return False, "El médico solicitante es obligatorio."
 
+    if len(medico_solicitante) > 50:
+        return False, "El médico solicitante no puede tener más de 50 caracteres."
+
     if not numero_muestra:
         return False, "El número de muestra es obligatorio."
+
+    if not numero_muestra.isdigit():
+        return False, "El número de muestra solo debe contener números."
+
+    numero_muestra_int = int(numero_muestra)
+    if numero_muestra_int < 1 or numero_muestra_int > 100:
+        return False, "El número de muestra debe estar entre 1 y 100."
 
     if not fecha_analisis:
         return False, "La fecha del análisis es obligatoria."
