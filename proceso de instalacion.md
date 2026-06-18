@@ -1,4 +1,4 @@
-# Proceso de Instalación — Sistema de Análisis de Bacilos
+# Proceso de Instalación — Sistema de Análisis de bichos
 
 Este documento explica cómo instalar y ejecutar la aplicación en una computadora nueva, tanto en modo desarrollo como generando el ejecutable portable.
 
