@@ -118,7 +118,7 @@ class ModeloController:
 
         campos = len(rutas_imagenes) if rutas_imagenes else 1
         promedio = round(total_bacilos / campos, 2)
-        diagnostico = self._calcular_diagnostico(promedio)
+        diagnostico = self._calcular_diagnostico(total_bacilos)
 
         logging.getLogger(__name__).info(
             "Total bacilos: %s | Promedio: %s | Diagnóstico: %s",
@@ -127,15 +127,13 @@ class ModeloController:
 
         return total_bacilos, promedio, diagnostico, rutas_procesadas
 
-    def _calcular_diagnostico(self, promedio):
-        """bueno, según cuántos bacilos salen, damos el resultado de la prueba"""
-        if promedio == 0:
+    def _calcular_diagnostico(self, total_bacilos):
+        """bueno, según el total de bacilos en los campos, damos el resultado de la prueba"""
+        if total_bacilos == 0:
             return "Negativo (-)"
-        elif promedio < 1:
-            return "Dudoso (±)"
-        elif 1 <= promedio <= 9:
+        elif 1 <= total_bacilos <= 20:
             return "Positivo (+)"
-        elif 10 <= promedio <= 99:
+        elif 21 <= total_bacilos <= 200:
             return "Positivo (++)"
         else:
             return "Positivo (+++)"

@@ -465,7 +465,7 @@ class CapturaView(ctk.CTkFrame):
                     total, rutas_procesadas = msg[1], msg[2]
                     total_img = len(self.camara.imagenes_capturadas)
                     promedio = round(total / total_img, 2) if total_img > 0 else 0
-                    diagnostico = self.modelo._calcular_diagnostico(promedio)
+                    diagnostico = self.modelo._calcular_diagnostico(total)
 
                     # bueno, guardamos los resultados en la base de datos
                     guardar_resultado(self.paciente_id, total, promedio, diagnostico, self.usuario_id)
