@@ -128,12 +128,13 @@ Archivo: `datos.db` (se crea automáticamente al iniciar la app)
 
 ## 🔬 Diagnóstico (Escala Ziehl-Neelsen)
 
-| Total de bichos en los campos | Diagnóstico |
+| Promedio de bichos por campo | Diagnóstico |
 |---|---|
 | 0 | Negativo (-) |
-| 1 – 20 | Positivo (+) |
-| 21 – 200 | Positivo (++) |
-| > 200 | Positivo (+++) |
+| > 0 y < 1 | Negativo (-) |
+| 1 – 10 | Positivo (+) |
+| > 10 – 100 | Positivo (++) |
+| > 100 | Positivo (+++) |
 
 > Nota: este proyecto es parte de una tesis académica. El término "bichos" se usa aquí de forma genérica para proteger el objeto de estudio.
 
