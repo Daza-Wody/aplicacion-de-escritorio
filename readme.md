@@ -1,6 +1,6 @@
-# 🔬 Sistema de Análisis de Bacilos
+# 🔬 Sistema de Análisis
 
-Aplicación de escritorio desarrollada en Python para el registro de pacientes y detección automática de bacilos mediante una red neuronal entrenada (YOLOv11). Genera un reporte en PDF con los resultados del análisis.
+Aplicación de escritorio desarrollada en Python para el registro de pacientes y detección automática de bichos mediante una red neuronal entrenada (YOLOv11). Genera un reporte en PDF con los resultados del análisis.
 
 ---
 
@@ -10,7 +10,7 @@ Proveer una interfaz gráfica de escritorio donde el personal de laboratorio pue
 1. Registrarse e iniciar sesión
 2. Registrar los datos del paciente
 3. Capturar 20 imágenes en tiempo real desde un telescopio conectado por USB
-4. Procesar las imágenes con una red neuronal YOLOv11 para detectar y contar bacilos
+4. Procesar las imágenes con una red neuronal YOLOv11 para detectar y contar bichos
 5. Generar un reporte PDF con los resultados del análisis
 
 ---
