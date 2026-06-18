@@ -1,6 +1,8 @@
-# Proceso de Instalación — Sistema de Análisis de Bacilos
+# Proceso de Instalación — Sistema de Análisis de Bichos
 
 Este documento explica cómo instalar y ejecutar la aplicación en una computadora nueva, tanto en modo desarrollo como generando el ejecutable portable.
+
+> Nota: este proyecto es parte de una tesis académica. El término "bichos" se usa de forma genérica para proteger el objeto de estudio.
 
 ---
 
@@ -20,13 +22,13 @@ Este documento explica cómo instalar y ejecutar la aplicación en una computado
 Abre una terminal (PowerShell o CMD) y ejecuta:
 
 ```bash
-git clone https://github.com/Daza-Wody/app-escritorio-deteccion-bacilos.git
+git clone https://github.com/Daza-Wody/aplicacion-de-escritorio.git
 ```
 
 Entra a la carpeta del proyecto:
 
 ```bash
-cd app-escritorio-deteccion-bacilos
+cd aplicacion-de-escritorio
 ```
 
 ---

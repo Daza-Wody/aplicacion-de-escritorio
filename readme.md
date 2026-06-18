@@ -1,6 +1,6 @@
-# 🔬 Sistema de Análisis de Bacilos
+# 🔬 Sistema de Análisis de Bichos
 
-Aplicación de escritorio desarrollada en Python para el registro de pacientes y detección automática de bacilos mediante una red neuronal entrenada (YOLOv11). Genera un reporte en PDF con los resultados del análisis.
+Aplicación de escritorio desarrollada en Python para el registro de pacientes y detección automática de bichos mediante una red neuronal entrenada (YOLOv11). Genera un reporte en PDF con los resultados del análisis.
 
 ---
 
@@ -10,7 +10,7 @@ Proveer una interfaz gráfica de escritorio donde el personal de laboratorio pue
 1. Registrarse e iniciar sesión
 2. Registrar los datos del paciente
 3. Capturar 20 imágenes en tiempo real desde un telescopio conectado por USB
-4. Procesar las imágenes con una red neuronal YOLOv11 para detectar y contar bacilos
+4. Procesar las imágenes con una red neuronal YOLOv11 para detectar y contar bichos
 5. Generar un reporte PDF con los resultados del análisis
 
 ---
@@ -136,6 +136,8 @@ Archivo: `datos.db` (se crea automáticamente al iniciar la app)
 | 10 – 99 | Positivo (++) |
 | ≥ 100 | Positivo (+++) |
 
+> Nota: este proyecto es parte de una tesis académica. El término "bichos" se usa aquí de forma genérica para proteger el objeto de estudio.
+
 ---
 
 ## 🖼️ Pantallas diseñadas
@@ -217,7 +219,7 @@ pip install -r requirements.txt
 
 - El modelo `best.pt` debe estar en la carpeta `modelo/` y fue entrenado con **YOLOv11**
 - El microscopio/telescopio se conecta por **USB** y la app permite elegir entre las cámaras disponibles (no solo el índice 0)
-- La app funciona **offline** para el procesamiento de imágenes; la consulta RENIEC requiere internet y un token válido
+- La app funciona **offline** para el procesamiento de imágenes
 - En desarrollo la base de datos `datos.db` se crea en la raíz del proyecto; en producción se usa `%LOCALAPPDATA%\BacilosApp\`
 - Las contraseñas se almacenan con **PBKDF2-HMAC-SHA256** + salt
 - Las credenciales de "Recordarme" se guardan ofuscadas (XOR con clave local), no en texto plano
