@@ -1,0 +1,21 @@
+# Core UI
+customtkinter>=5.2.2
+
+# Image processing
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# ML / YOLO
+ultralytics>=8.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+
+# PDF generation
+reportlab>=4.0.0
+
+# HTTP / API
+requests>=2.31.0
+
+# Build tool (instalar solo para desarrollo/build)
+# pyinstaller>=6.0.0

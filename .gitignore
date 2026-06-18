@@ -1,0 +1,56 @@
+# =============================================================================
+# Git Ignore — Sistema de Análisis de Bacilos
+# =============================================================================
+
+# --- Tokens y variables de entorno (NUNCA subir) ---
+.env
+.env.local
+.env.*.local
+
+# --- Base de datos SQLite y datos del usuario ---
+datos.db
+*.db-journal
+*.sqlite3
+remember.json
+config.json
+
+# --- Carpetas de datos generados por la app ---
+capturas/
+reportes/
+
+# --- Archivos de log ---
+*.log
+bacilos_app.log
+
+# --- Python / Bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# --- Entornos virtuales ---
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- PyInstaller / Build ---
+dist/
+build/
+*.spec
+
+# --- IDEs y editores ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+*.stackdump
