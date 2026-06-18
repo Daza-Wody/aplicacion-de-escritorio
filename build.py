@@ -122,7 +122,7 @@ def print_summary():
     print("\nSiguientes pasos:")
     print("  1. Prueba el ejecutable: dist/BacilosApp/BacilosApp.exe")
     print("  2. Para distribuir, comprime la carpeta dist/BacilosApp en ZIP")
-    print("  3. O crea un instalador con Inno Setup (ver README_PRODUCCION.md)")
+    print("  3. Para más detalles, revisa 'proceso de instalacion.md'")
     print("=" * 60)
 
 
